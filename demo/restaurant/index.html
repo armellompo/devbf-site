@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Démo : site de restaurant avec commande WhatsApp | DevBF</title>
+    <meta name="description" content="Démonstration d’un site de restaurant fictif : menu, commande envoyée sur WhatsApp et paiement Mobile Money simulé. Réalisé par DevBF.">
+    <meta name="author" content="DevBF">
+    <!-- Page de démonstration : volontairement absente de Google (aussi réglé dans _headers). -->
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#b3261e">
+
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23b3261e'/%3E%3Cpath d='M50 18 L72 50 L50 82 L28 50Z' fill='%23f2b233'/%3E%3Cpath d='M50 36 L61 50 L50 64 L39 50Z' fill='%23b3261e'/%3E%3C/svg%3E" type="image/svg+xml">
+
+    <link rel="preload" href="../../assets/fonts/inter-latin-400.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../assets/fonts/inter-latin-600.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/big-shoulders-700.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../../css/icons.css">
+    <link rel="stylesheet" href="demo.css">
+</head>
+<body>
+    <a href="#menu" class="skip-link">Aller au menu</a>
+
+    <div class="demo-bar" role="note">
+        <span class="demo-tag">Démo</span>
+        <p>Restaurant fictif créé par DevBF : le menu, les prix et le paiement sont inventés.</p>
+        <a href="../../index.html#portfolio">Retour au site DevBF</a>
+        <a href="https://wa.me/22675598412?text=Bonjour%2C%20j%27ai%20test%C3%A9%20la%20d%C3%A9mo%20du%20site%20restaurant%20sur%20devbf.com.%20Je%20voudrais%20la%20m%C3%AAme%20chose%20pour%20mon%20restaurant.%0ANom%20de%20mon%20restaurant%20%3A%20" target="_blank" rel="noopener noreferrer" data-source="demo-bar">Je veux la même chose</a>
+    </div>
+
+    <noscript>
+        <p class="noscript">Cette démo a besoin de JavaScript pour fonctionner. Activez-le dans votre navigateur, ou revenez sur le site DevBF.</p>
+    </noscript>
+
+    <header class="hero">
+        <img class="hero-img" src="../../assets/images/concept-restaurant.webp" alt="" width="1050" height="1400" decoding="async" fetchpriority="high">
+        <div class="hero-shade"></div>
+        <div class="hero-inner">
+            <p class="hero-kicker">Maquis &amp; restaurant · Ouagadougou</p>
+            <h1>Saveurs du Faso</h1>
+            <p class="hero-sub">Cuisine burkinabè, braisée et mijotée. Choisissez vos plats, la commande part sur WhatsApp, on la prépare.</p>
+            <ul class="hero-facts">
+                <li><i class="fas fa-clock" aria-hidden="true"></i> Tous les jours, 11 h – 22 h</li>
+                <li><i class="fas fa-motorcycle" aria-hidden="true"></i> Livraison à Ouagadougou</li>
+                <li><i class="fas fa-wallet" aria-hidden="true"></i> Espèces ou Mobile Money</li>
+            </ul>
+            <a class="btn btn-primary" href="#menu">Voir le menu</a>
+        </div>
+    </header>
+
+    <nav class="tabs" aria-label="Catégories du menu">
+        <div class="tabs-inner">
+            <a class="tab" href="#cat-plats" aria-current="true">Plats</a>
+            <a class="tab" href="#cat-grillades">Grillades</a>
+            <a class="tab" href="#cat-boissons">Boissons</a>
+            <a class="tab" href="#cat-accompagnements">Accompagnements</a>
+        </div>
+    </nav>
+
+    <main id="menu" class="menu">
+        <section class="cat" id="cat-plats" aria-labelledby="h-plats">
+            <h2 id="h-plats">Plats</h2>
+            <ul class="items">
+                <li class="item" data-id="riz-gras" data-name="Riz gras au poulet" data-price="2500">
+                    <div class="item-text">
+                        <h3>Riz gras au poulet</h3>
+                        <p>Riz parfumé à la tomate, poulet mijoté, salade.</p>
+                    </div>
+                    <div class="item-buy">
+                        <span class="price">2&nbsp;500 <small>FCFA</small></span>
+                        <div class="controls"></div>
+                    </div>
+                </li>
+                <li class="item" data-id="to-gombo" data-name="Tô sauce gombo" data-price="2000">
+                    <div class="item-text">
+                        <h3>Tô sauce gombo</h3>
+                        <p>Pâte de maïs ou de mil, sauce gombo et viande de bœuf.</p>
+                    </div>
+                    <div class="item-buy">
+                        <span class="price">2&nbsp;000 <small>FCFA</small></span>
+                        <div class="controls"></div>
+                    </div>
+                </li>
+                <li class="item" data-id="riz-arachide" data-name="Riz sauce arachide" data-price="2500">
+                    <div class="item-text">
+                        <h3>Riz sauce arachide</h3>
+                        <p>Riz blanc, sauce arachide onctueuse, morceaux de poulet.</p>
+                    </div>
+                    <div class="item-buy">
+                        <span class="price">2&nbsp;500 <small>FCFA</small></span>
+                        <div class="controls"></div>
+                    </div>
+                </li>
+                <li class="item" data-id="haricots" data-name="Haricots et plantain" data-price="1500">
+                    <div class="item-text">
+                        <h3>Haricots et plantain</h3>
+                        <p>Haricots mijotés, banane plantain frite, piment à part.</p>
+                    </div>
+                    <div class="item-buy">
+                        <span class="price">1&nbsp;500 <small>FCFA</small></span>
+                        <div class="controls"></div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section class="cat" id="cat-grillades" aria-labelledby="h-grillades">
+            <h2 id="h-grillades">Grillades</h2>
+            <ul class="items">
+                <li class="item" data-id="poulet-braise" data-name="Poulet braisé (demi)" data-price="4000">
+                    <div class="item-text">
+                        <h3>Poulet braisé (demi)</h3>
+                        <p>Demi-poulet braisé au feu de bois, oignons et tomates.</p>
+                    </div>
+                    <div class="item-buy">
+                        <span class="price">4&nbsp;000 <small>FCFA</small></span>
+                        <div class="controls"></div>
+                    </div>
+                </li>
+                <li class="item" data-id="poisson-braise" data-name="Poisson braisé et attiéké" data-price="3500">
+                    <div class="item-text">
+                        <h3>Poisson braisé et attiéké</h3>
+                        <p>Poisson braisé, attiéké, tomates et oignons.</p>
+                    </div>
+                    <div class="item-buy">
+                        <span class="price">3&nbsp;500 <small>FCFA</small></span>
+                        <div class="controls"></div>
+                    </div>
+                </li>
+                <li class="item" data-id="brochettes" data-name="Brochettes de bœuf (5)" data-price="1500">
+                    <div class="item-text">
+                        <h3>Brochettes de bœuf (5)</h3>
+                        <p>Cinq brochettes grillées, oignons et poudre de piment.</p>
+                        <span class="tag"><i class="fas fa-pepper-hot" aria-hidden="true"></i> Pimenté</span>
+                    </div>
+                    <div class="item-buy">
+                        <span class="price">1&nbsp;500 <small>FCFA</small></span>
+                        <div class="controls"></div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section class="cat" id="cat-boissons" aria-labelledby="h-boissons">
+            <h2 id="h-boissons">Boissons</h2>
+            <ul class="items">
+                <li class="item" data-id="bissap" data-name="Bissap" data-price="500">
+                    <div class="item-text">
+                        <h3>Bissap</h3>
+                        <p>Jus d’hibiscus, bien frais.</p>
+                    </div>
+                    <div class="item-buy">
+                        <span class="price">500 <small>FCFA</small></span>
+                        <div class="controls"></div>
+                    </div>
+                </li>
+                <li class="item" data-id="gingembre" data-name="Jus de gingembre" data-price="500">
+                    <div class="item-text">
+                        <h3>Jus de gingembre</h3>
+                        <p>Piquant et rafraîchissant.</p>
+                    </div>
+                    <div class="item-buy">
+                        <span class="price">500 <small>FCFA</small></span>
+                        <div class="controls"></div>
+                    </div>
+                </li>
+                <li class="item" data-id="zoom-koom" data-name="Zoom-koom" data-price="500">
+                    <div class="item-text">
+                        <h3>Zoom-koom</h3>
+                        <p>Boisson fraîche à base de mil.</p>
+                    </div>
+                    <div class="item-buy">
+                        <span class="price">500 <small>FCFA</small></span>
+                        <div class="controls"></div>
+                    </div>
+                </li>
+                <li class="item" data-id="eau" data-name="Eau minérale" data-price="500">
+                    <div class="item-text">
+                        <h3>Eau minérale</h3>
+                        <p>Bouteille de 1,5 L.</p>
+                    </div>
+                    <div class="item-buy">
+                        <span class="price">500 <small>FCFA</small></span>
+                        <div class="controls"></div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section class="cat" id="cat-accompagnements" aria-labelledby="h-accompagnements">
+            <h2 id="h-accompagnements">Accompagnements</h2>
+            <ul class="items">
+                <li class="item" data-id="alloco" data-name="Banane plantain frite" data-price="1000">
+                    <div class="item-text">
+                        <h3>Banane plantain frite</h3>
+                        <p>L’alloco bien doré, en portion.</p>
+                    </div>
+                    <div class="item-buy">
+                        <span class="price">1&nbsp;000 <small>FCFA</small></span>
+                        <div class="controls"></div>
+                    </div>
+                </li>
+                <li class="item" data-id="attieke" data-name="Attiéké" data-price="1000">
+                    <div class="item-text">
+                        <h3>Attiéké</h3>
+                        <p>Semoule de manioc, portion.</p>
+                    </div>
+                    <div class="item-buy">
+                        <span class="price">1&nbsp;000 <small>FCFA</small></span>
+                        <div class="controls"></div>
+                    </div>
+                </li>
+                <li class="item" data-id="salade" data-name="Salade fraîche" data-price="700">
+                    <div class="item-text">
+                        <h3>Salade fraîche</h3>
+                        <p>Laitue, tomate, concombre.</p>
+                    </div>
+                    <div class="item-buy">
+                        <span class="price">700 <small>FCFA</small></span>
+                        <div class="controls"></div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p><strong>Démo réalisée par DevBF.</strong> Saveurs du Faso n’existe pas : le menu, les prix et les paiements sont fictifs, et la photo est une illustration.</p>
+        <p>
+            <a href="../../index.html">Retour au site DevBF</a> ·
+            <a href="https://wa.me/22675598412?text=Bonjour%2C%20j%27ai%20test%C3%A9%20la%20d%C3%A9mo%20du%20site%20restaurant%20sur%20devbf.com.%20Je%20voudrais%20la%20m%C3%AAme%20chose%20pour%20mon%20restaurant.%0ANom%20de%20mon%20restaurant%20%3A%20" target="_blank" rel="noopener noreferrer" data-source="demo-footer">Je veux la même chose pour mon restaurant</a>
+        </p>
+        <p class="credits">Polices Big Shoulders et Inter (licence SIL OFL). Icônes Font Awesome Free (CC BY 4.0).</p>
+    </footer>
+
+    <!-- Barre de commande -->
+    <button type="button" class="cart-bar" id="cartBar" aria-haspopup="dialog" hidden>
+        <span class="cart-bar-label"><span class="cart-count" id="barCount" aria-hidden="true">0</span> Voir ma commande</span>
+        <span class="cart-total" id="barTotal" aria-hidden="true"></span>
+    </button>
+
+    <!-- Annonce discrète pour les lecteurs d'écran -->
+    <div class="sr-only" id="live" role="status" aria-live="polite"></div>
+
+    <div class="sheet-backdrop" id="sheetBackdrop" hidden></div>
+
+    <section class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle" hidden>
+        <div class="sheet-head">
+            <h2 id="sheetTitle">Ma commande</h2>
+            <button type="button" class="icon-btn" id="sheetClose" aria-label="Fermer">
+                <i class="fas fa-xmark" aria-hidden="true"></i>
+            </button>
+        </div>
+
+        <div class="sheet-body" id="sheetBody">
+
+            <!-- Étape 1 : la commande -->
+            <form id="stepOrder" novalidate>
+                <ul class="cart-lines" id="cartLines"></ul>
+                <p class="muted" id="cartEmpty" hidden>Votre commande est vide. Fermez cette fenêtre pour choisir vos plats.</p>
+
+                <fieldset class="field">
+                    <legend>Comment voulez-vous être servi ?</legend>
+                    <div class="chips">
+                        <label class="chip"><input type="radio" name="mode" value="Sur place" checked><span><i class="fas fa-store" aria-hidden="true"></i> Sur place</span></label>
+                        <label class="chip"><input type="radio" name="mode" value="À emporter"><span><i class="fas fa-bag-shopping" aria-hidden="true"></i> À emporter</span></label>
+                        <label class="chip"><input type="radio" name="mode" value="Livraison"><span><i class="fas fa-motorcycle" aria-hidden="true"></i> Livraison</span></label>
+                    </div>
+                </fieldset>
+
+                <div class="field">
+                    <label for="fName">Votre nom</label>
+                    <input type="text" id="fName" name="name" autocomplete="name" placeholder="Ex. : Awa">
+                </div>
+
+                <div class="field">
+                    <label for="fPhone">Téléphone ou WhatsApp</label>
+                    <input type="tel" id="fPhone" name="phone" inputmode="tel" autocomplete="tel" placeholder="Ex. : 70 12 34 56">
+                </div>
+
+                <div class="field" id="addressField" hidden>
+                    <label for="fAddress">Quartier et repère</label>
+                    <input type="text" id="fAddress" name="address" autocomplete="street-address" placeholder="Ex. : Ouaga 2000, près de la pharmacie">
+                    <p class="hint">Livraison : 500&nbsp;FCFA dans cet exemple.</p>
+                </div>
+
+                <div class="field">
+                    <label for="fNote">Remarque (facultatif)</label>
+                    <input type="text" id="fNote" name="note" placeholder="Ex. : sans piment">
+                </div>
+
+                <fieldset class="field">
+                    <legend>Paiement</legend>
+                    <div class="chips">
+                        <label class="chip"><input type="radio" name="pay" value="cash" checked><span><i class="fas fa-money-bill-wave" aria-hidden="true"></i> À la remise</span></label>
+                        <label class="chip"><input type="radio" name="pay" value="momo"><span><i class="fas fa-mobile-alt" aria-hidden="true"></i> Mobile Money (simulation)</span></label>
+                    </div>
+                </fieldset>
+
+                <div class="totals" aria-live="polite">
+                    <div><span>Sous-total</span><span id="tSub"></span></div>
+                    <div id="tFeeRow" hidden><span>Livraison</span><span id="tFee"></span></div>
+                    <div class="grand"><span>Total</span><span id="tTotal"></span></div>
+                </div>
+
+                <p class="form-error" id="orderError" role="alert" hidden></p>
+                <button type="submit" class="btn btn-primary btn-block" id="orderSubmit">Préparer mon message WhatsApp</button>
+            </form>
+
+            <!-- Étape 2 : paiement Mobile Money SIMULÉ -->
+            <div id="stepPay" hidden>
+                <p class="demo-note"><i class="fas fa-circle-info" aria-hidden="true"></i> <span><strong>Simulation.</strong> Aucun argent n’est prélevé et aucun numéro n’est enregistré. Sur un vrai site, cette étape passe par un prestataire de paiement, selon vos accès.</span></p>
+
+                <p class="pay-amount">À payer : <strong id="payAmount"></strong></p>
+
+                <fieldset class="field">
+                    <legend>Opérateur</legend>
+                    <div class="chips">
+                        <label class="chip"><input type="radio" name="operator" value="Orange Money" checked><span>Orange Money</span></label>
+                        <label class="chip"><input type="radio" name="operator" value="Moov Money"><span>Moov Money</span></label>
+                    </div>
+                </fieldset>
+
+                <div class="field">
+                    <label for="fMomo">Numéro Mobile Money</label>
+                    <input type="tel" id="fMomo" inputmode="tel" autocomplete="tel" placeholder="Ex. : 70 12 34 56">
+                </div>
+
+                <p class="form-error" id="payError" role="alert" hidden></p>
+                <p class="pay-wait" id="payWait" role="status" hidden><i class="fas fa-spinner fa-spin" aria-hidden="true"></i> Confirmation en cours sur votre téléphone…</p>
+
+                <button type="button" class="btn btn-primary btn-block" id="payConfirm">Payer (simulation)</button>
+                <button type="button" class="btn-link" id="payBack"><i class="fas fa-arrow-left" aria-hidden="true"></i> Modifier ma commande</button>
+            </div>
+
+            <!-- Étape 3 : message WhatsApp prêt -->
+            <div id="stepDone" tabindex="-1" hidden>
+                <p class="done-icon" aria-hidden="true"><i class="fas fa-circle-check"></i></p>
+                <p class="done-lead" id="doneLead"></p>
+
+                <div class="chat" aria-label="Aperçu du message WhatsApp"><pre id="waPreview"></pre></div>
+
+                <a class="btn btn-whatsapp btn-block" id="waSend" href="https://wa.me/22675598412" target="_blank" rel="noopener noreferrer" data-source="demo-order">
+                    <i class="fab fa-whatsapp" aria-hidden="true"></i> Envoyer ce message de test
+                </a>
+                <p class="demo-note"><i class="fas fa-circle-info" aria-hidden="true"></i> <span>Démo : ce message part vers le WhatsApp de DevBF, pas vers un vrai restaurant. Sur votre site, il arrive directement sur le numéro de votre restaurant.</span></p>
+
+                <a class="btn btn-secondary btn-block" href="https://wa.me/22675598412?text=Bonjour%2C%20j%27ai%20test%C3%A9%20la%20d%C3%A9mo%20du%20site%20restaurant%20sur%20devbf.com.%20Je%20voudrais%20la%20m%C3%AAme%20chose%20pour%20mon%20restaurant.%0ANom%20de%20mon%20restaurant%20%3A%20" target="_blank" rel="noopener noreferrer" data-source="demo-want">Je veux la même chose pour mon restaurant</a>
+                <button type="button" class="btn-link" id="newOrder">Faire une nouvelle commande</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="demo.js" defer></script>
+</body>
+</html>

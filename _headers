@@ -1,0 +1,47 @@
+# En-têtes HTTP du site : format lu par Netlify et par Cloudflare Pages (le fichier est ignoré par les autres hébergeurs).
+# Sur un autre hébergeur (Apache, Nginx, Vercel…), reprenez les mêmes valeurs dans sa propre configuration.
+#
+# Politique de sécurité du contenu (CSP) :
+#   - scripts et styles : uniquement ceux du site (pas de code en ligne) ;
+#   - Google Fonts est encore autorisé (fonts.googleapis.com dans style-src, fonts.gstatic.com dans font-src) pour
+#     Space Grotesk (titres du site) et pour les polices de la vitrine « L'Atelier de Victoria ». Retirez ces deux
+#     domaines seulement quand plus aucune page n'en dépend (voir README, section Fonts) ;
+#   - formspree.io : envoi du formulaire de contact ;
+#   - pour activer des statistiques (Plausible, Umami), ajoutez leur domaine à script-src et connect-src.
+
+/*
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://formspree.io; form-action 'self' https://formspree.io; base-uri 'self'; object-src 'none'; frame-ancestors 'none'
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()
+  Strict-Transport-Security: max-age=31536000
+
+# Fichiers qui changent rarement : mis en cache un an. Si vous remplacez une image ou une police,
+# donnez-lui un nouveau nom de fichier.
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# CSS et JavaScript gardent le même nom d'une version à l'autre : cache court, puis revalidation.
+/css/*
+  Cache-Control: public, max-age=3600, must-revalidate
+/js/*
+  Cache-Control: public, max-age=3600, must-revalidate
+
+# La démonstration (restaurant fictif) ne doit pas apparaître dans Google.
+# Ne la bloquez pas dans robots.txt : Google doit pouvoir lire cette consigne « noindex ».
+/demo/*
+  X-Robots-Tag: noindex, nofollow
+
+# Vitrine « L'Atelier de Victoria » : le vrai site d'une boutique de Ouagadougou, montré ici comme réalisation.
+# Elle n'est pas indexée : une fois publiée à sa propre adresse, c'est celle-là qui doit apparaître dans Google,
+# pas cette copie. (Retirez la première règle si vous voulez que cette copie soit indexée.)
+# Comme pour /assets/*, donnez un nouveau nom de fichier à toute image remplacée.
+/realisations/atelier-victoria/*
+  X-Robots-Tag: noindex
+/realisations/atelier-victoria/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+/realisations/atelier-victoria/css/*
+  Cache-Control: public, max-age=3600, must-revalidate
+/realisations/atelier-victoria/js/*
+  Cache-Control: public, max-age=3600, must-revalidate

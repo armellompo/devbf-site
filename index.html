@@ -1,0 +1,1490 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevBF | Sites web pour restaurants et boutiques au Burkina Faso</title>
+    <meta name="description" content="Sites web pour restaurants, maquis et boutiques au Burkina Faso : commande WhatsApp, paiement Mobile Money, rapides sur mobile. Ouagadougou, Bobo-Dioulasso.">
+    <meta name="author" content="DevBF">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#f6f7f9">
+    <link rel="canonical" href="https://devbf.com/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://devbf.com/">
+    <meta property="og:title" content="DevBF | Sites web pour restaurants et boutiques au Burkina Faso">
+    <meta property="og:description" content="Votre menu ou vos produits en ligne, commandes sur WhatsApp, paiement Mobile Money. Sites rapides pour restaurants et boutiques burkinabè.">
+    <meta property="og:image" content="https://devbf.com/og-devbf.jpg">
+    <meta property="og:locale" content="fr_BF">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="DevBF | Sites web pour restaurants et boutiques au Burkina Faso">
+    <meta name="twitter:description" content="Sites web pour restaurants et boutiques : commande WhatsApp et paiement Mobile Money.">
+    <meta name="twitter:image" content="https://devbf.com/og-devbf.jpg">
+
+    <!-- Favicon inline -->
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+    <!-- Polices : Inter est hébergée dans assets/fonts (déclarée dans css/style.css).
+         Space Grotesk (titres) vient encore de Google Fonts : voir le README, section Fonts. -->
+    <link rel="preload" href="assets/fonts/inter-latin-400.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/inter-latin-600.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icônes : CSS local, généré par tools/build_icons.py -->
+    <link rel="stylesheet" href="css/icons.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "DevBF",
+      "description": "Sites web pour restaurants, maquis et boutiques au Burkina Faso : commande WhatsApp, paiement Mobile Money, SEO local et applications sur mesure.",
+      "url": "https://devbf.com",
+      "telephone": "+22675598412",
+      "email": "lompounteni07@gmail.com",
+      "areaServed": "Burkina Faso",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Ouagadougou",
+        "addressCountry": "BF"
+      },
+      "priceRange": "50000 FCFA - Sur devis"
+    }
+    </script>
+
+    <!-- FAQ : données structurées, à garder synchronisées avec la section FAQ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Puis-je payer avec Orange Money ou Moov Money ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui. Je peux intégrer les paiements Mobile Money selon vos besoins : commande en ligne, réservation, abonnement, paiement partiel ou validation de commande. L’objectif est de simplifier l’expérience client au Burkina Faso."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Mon activité est toute petite : un site est-il possible avec un petit budget ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, c’est pour cela que la formule Mini existe : à partir de 50 000 FCFA, une page avec votre catalogue (jusqu’à 10 articles), un panier et la commande par WhatsApp, sur le modèle de la boutique L’Atelier de Victoria. Le cadre est volontairement simple, ce qui permet de garder le prix bas. Si votre activité grandit, vous pourrez passer à Starter ou à Business."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Combien de temps faut-il pour créer un site ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Un site vitrine peut être livré en quelques jours. Un site e-commerce ou une application sur mesure demande généralement plus de temps, selon les fonctionnalités, les contenus et les validations. Vous recevez toujours un planning clair avant de commencer."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "L’hébergement et le nom de domaine sont-ils inclus ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Selon la formule choisie, l’hébergement peut être inclus pendant une période définie. Le nom de domaine peut être pris en charge ou accompagné selon vos préférences. L’important est que vous compreniez exactement ce qui est inclus, sans frais cachés."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Mon site sera-t-il rapide avec une connexion mobile ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui. Les sites sont optimisés pour le mobile, les images sont compressées, le code est allégé et les animations sont utilisées avec intelligence. L’objectif est d’offrir une bonne expérience même sur connexion 3G/4G."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Pourrai-je modifier mon site moi-même après la livraison ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, si la formule inclut un espace administrateur ou un CMS. Vous pourrez mettre à jour vos textes, images, produits, articles ou informations sans dépendre complètement d’un développeur pour chaque modification."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Que se passe-t-il après la mise en ligne ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Je reste disponible pour le support, les corrections, les évolutions et l’optimisation. Un site n’est pas un produit fini : c’est un outil commercial qui doit évoluer avec votre activité."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <script src="js/theme-init.js"></script>
+
+    <!-- Animated Mesh Background -->
+    <div class="mesh-bg" aria-hidden="true">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <a href="#main" class="skip-link">Aller au contenu principal</a>
+
+    <!-- Navigation -->
+    <nav id="navbar" aria-label="Navigation principale">
+        <a href="#accueil" class="logo">Dev<span>BF</span></a>
+
+        <button
+            class="menu-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="navLinks"
+            aria-label="Ouvrir le menu"
+        >
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Réalisations</a></li>
+            <li><a href="#methode">Méthode</a></li>
+            <li><a href="#tarifs">Tarifs</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact" class="nav-cta">Démarrer un projet</a></li>
+            <li>
+                <button class="theme-toggle" id="themeToggle" type="button" aria-label="Activer le thème sombre">
+                    <i class="fas fa-sun"></i>
+                </button>
+            </li>
+        </ul>
+    </nav>
+
+    <main id="main">
+
+        <!-- Hero Section -->
+        <section class="hero" id="accueil" aria-label="Présentation">
+            <div class="hero-layout">
+                <div class="hero-copy">
+                    <div class="hero-badge">
+                        <i class="fas fa-circle status-dot" aria-hidden="true"></i>
+                        Disponible pour de nouveaux projets
+                    </div>
+
+                    <h1>
+                        Le site web qui propulse votre<br>
+                        <span class="rotator-wrapper" aria-hidden="true">
+                            <span class="rotator-word active" data-index="0">restaurant</span>
+                            <span class="rotator-word" data-index="1">boutique</span>
+                            <span class="rotator-word" data-index="2">maquis</span>
+                            <span class="rotator-word" data-index="3">commerce</span>
+                        </span>
+                        <span class="sr-only">commerce</span>
+                    </h1>
+
+                    <p>
+                        Des sites pour restaurants, maquis et boutiques&nbsp;: vos clients voient votre menu ou vos produits,
+                        commandent sur WhatsApp et paient en Mobile Money. Rapides sur téléphone, en ligne en quelques jours.
+                    </p>
+
+                    <div class="btn-group">
+                        <a href="#contact" class="btn btn-primary">
+                            Démarrer un projet <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                        <a
+                            href="https://wa.me/22675598412?text=Bonjour%2C%20je%20souhaite%20discuter%20de%20mon%20projet%20web."
+                            class="btn btn-whatsapp"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            data-source="hero"
+                        >
+                            <i class="fab fa-whatsapp" aria-hidden="true"></i> Écrire sur WhatsApp
+                        </a>
+                    </div>
+
+                    <p class="hero-demo-link">
+                        <a href="realisations/atelier-victoria/index.html" data-demo="hero-atelier">
+                            Voir un site réel&nbsp;: la boutique de L’Atelier de Victoria <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                        <span class="hero-demo-alt">ou <a href="demo/restaurant/index.html" data-demo="hero">essayer la démo d’un site de restaurant</a></span>
+                    </p>
+                </div>
+
+                <div class="hero-visual" aria-hidden="true">
+                    <div class="browser">
+                        <div class="browser-bar">
+                            <span class="dot dot-red"></span>
+                            <span class="dot dot-yellow"></span>
+                            <span class="dot dot-green"></span>
+                            <div class="browser-url">
+                                <i class="fas fa-lock"></i>
+                                devbf.com/exemple
+                            </div>
+                        </div>
+
+                        <div class="browser-body">
+                            <div class="mock-nav">
+                                <div class="mock-logo"></div>
+                                <div class="mock-links">
+                                    <span class="mock-link"></span>
+                                    <span class="mock-link"></span>
+                                    <span class="mock-link"></span>
+                                </div>
+                            </div>
+
+                            <div class="mock-scenes">
+                                <div class="mock-scene active" data-scene="0">
+                                    <div class="mock-kicker">Restaurant</div>
+                                    <div class="mock-heading">Commandez en ligne</div>
+                                    <div class="mock-sub">Menu, WhatsApp et paiement Mobile Money.</div>
+                                    <div class="mock-btn-row">
+                                        <div class="mock-btn primary">Commander</div>
+                                        <div class="mock-btn money">Orange Money</div>
+                                    </div>
+                                    <div class="mock-cards">
+                                        <div class="mock-card"></div>
+                                        <div class="mock-card"></div>
+                                        <div class="mock-card"></div>
+                                    </div>
+                                </div>
+
+                                <div class="mock-scene" data-scene="1">
+                                    <div class="mock-kicker">Boutique</div>
+                                    <div class="mock-heading">Nouvelle collection</div>
+                                    <div class="mock-sub">Catalogue produits, commande et livraison.</div>
+                                    <div class="mock-btn-row">
+                                        <div class="mock-btn primary">Ajouter</div>
+                                        <div class="mock-btn moov">Moov Money</div>
+                                    </div>
+                                    <div class="mock-cards">
+                                        <div class="mock-card"></div>
+                                        <div class="mock-card"></div>
+                                        <div class="mock-card"></div>
+                                    </div>
+                                </div>
+
+                                <div class="mock-scene" data-scene="2">
+                                    <div class="mock-kicker">Maquis</div>
+                                    <div class="mock-heading">Votre carte du jour</div>
+                                    <div class="mock-sub">Plats, boissons et prix toujours à jour.</div>
+                                    <div class="mock-btn-row">
+                                        <div class="mock-btn primary">Commander</div>
+                                        <div class="mock-btn soft">Itinéraire</div>
+                                    </div>
+                                    <div class="mock-cards">
+                                        <div class="mock-card"></div>
+                                        <div class="mock-card"></div>
+                                        <div class="mock-card"></div>
+                                    </div>
+                                </div>
+
+                                <div class="mock-scene" data-scene="3">
+                                    <div class="mock-kicker">Commerce</div>
+                                    <div class="mock-heading">Un site, un WhatsApp</div>
+                                    <div class="mock-sub">Horaires, produits et contact en un clic.</div>
+                                    <div class="mock-btn-row">
+                                        <div class="mock-btn primary">Appeler</div>
+                                        <div class="mock-btn soft">WhatsApp</div>
+                                    </div>
+                                    <div class="mock-cards">
+                                        <div class="mock-card wide"></div>
+                                        <div class="mock-card"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="phone">
+                        <div class="phone-notch"></div>
+                        <div class="phone-screen">
+                            <div class="phone-title" id="phoneTitle">Commande en ligne</div>
+                            <div class="phone-item"></div>
+                            <div class="phone-item"></div>
+                            <div class="phone-item"></div>
+                            <div class="phone-pay" id="phonePay">Payer</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Credibility Strip -->
+        <section class="credibility-section" aria-label="Repères DevBF">
+            <div class="container">
+                <div class="credibility-strip reveal">
+                    <div class="cred-item">
+                        <i class="fas fa-mobile-alt" aria-hidden="true"></i>
+                        <span>Mobile-first</span>
+                    </div>
+                    <div class="cred-item">
+                        <i class="fas fa-flag" aria-hidden="true"></i>
+                        <span>Burkina Faso</span>
+                    </div>
+                    <div class="cred-item">
+                        <i class="fas fa-tag" aria-hidden="true"></i>
+                        <span>Prix transparent</span>
+                    </div>
+                    <div class="cred-item">
+                        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                        <span>Support WhatsApp</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services -->
+        <section id="services" class="section" aria-labelledby="services-title">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 id="services-title">Ce que je peux construire</h2>
+                    <p>Des solutions digitales simples, crédibles et adaptées à votre activité.</p>
+                </div>
+
+                <div class="bento-grid reveal" id="bentoGrid">
+                    <article class="bento-card bento-large">
+                        <div>
+                            <div class="icon-box" aria-hidden="true">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                            <h3>E-commerce &amp; Mobile Money</h3>
+                            <p>
+                                Vendez 24h/24. Intégration possible d’Orange Money et de Moov Money selon votre activité et vos accès.
+                                Ajoutez une boutique en ligne adaptée à vos clients.
+                            </p>
+                            <ul class="bento-points">
+                                <li><i class="fas fa-check" aria-hidden="true"></i><span>Catalogue, panier et commande sur WhatsApp</span></li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i><span>Paiement Mobile Money, selon vos accès</span></li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i><span>Retrait sur place ou livraison</span></li>
+                            </ul>
+                        </div>
+                        <i class="fas fa-coins bg-icon" aria-hidden="true"></i>
+                    </article>
+
+                    <article class="bento-card">
+                        <div class="icon-box" aria-hidden="true">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3>Sites Vitrines</h3>
+                        <p>Design premium et animations fluides pour renforcer la crédibilité de votre entreprise.</p>
+                    </article>
+
+                    <article class="bento-card">
+                        <div class="icon-box" aria-hidden="true">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h3>SEO Local</h3>
+                        <p>Améliorez votre visibilité locale sur Google à Ouagadougou et Bobo-Dioulasso.</p>
+                    </article>
+
+                    <article class="bento-card bento-wide">
+                        <div>
+                            <div class="icon-box" aria-hidden="true">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <h3>Applications Sur Mesure</h3>
+                            <p>
+                                Digitalisez vos processus internes&nbsp;: gestion de stocks, CRM, portails clients.
+                                Je code exactement ce dont votre business a besoin.
+                            </p>
+                        </div>
+                        <i class="fas fa-server bg-icon" aria-hidden="true"></i>
+                    </article>
+
+                    <article class="bento-card bento-wide">
+                        <div class="icon-box" aria-hidden="true">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Mobile-First</h3>
+                        <p>Pensé d’abord pour le téléphone&nbsp;: lecture facile, boutons faciles à toucher, chargement léger.</p>
+                    </article>
+
+                    <article class="bento-card bento-wide">
+                        <div class="icon-box" aria-hidden="true">
+                            <i class="fas fa-wrench"></i>
+                        </div>
+                        <h3>Maintenance &amp; suivi</h3>
+                        <p>Mises à jour, sauvegardes et petites modifications chaque mois, en option. Votre site reste à jour sans que vous ayez à y penser.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Réalisations -->
+        <section id="portfolio" class="section section--solid" aria-labelledby="portfolio-title">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 id="portfolio-title">Réalisations et concepts</h2>
+                    <p>Une vraie boutique en ligne à essayer sur votre téléphone, puis des concepts à adapter à votre activité.</p>
+                </div>
+
+                <!--
+                    PROJET MIS EN AVANT : la boutique de L’Atelier de Victoria (dossier realisations/atelier-victoria/).
+                    Les captures (assets/images/atelier-desktop.webp et atelier-mobile.webp) sont à refaire si le site change.
+                -->
+                <article class="project-feature reveal" aria-labelledby="atelier-title">
+                    <div class="pf-media">
+                        <div class="pf-browser">
+                            <div class="pf-browser-bar" aria-hidden="true">
+                                <span class="dot dot-red"></span>
+                                <span class="dot dot-yellow"></span>
+                                <span class="dot dot-green"></span>
+                                <div class="browser-url">
+                                    <i class="fas fa-lock"></i>
+                                    devbf.com/realisations/atelier-victoria
+                                </div>
+                            </div>
+                            <img
+                                class="pf-shot-desktop"
+                                src="assets/images/atelier-desktop.webp"
+                                width="960"
+                                height="600"
+                                alt="Page d’accueil du site L’Atelier de Victoria sur ordinateur : le titre « Le crochet fait main, pensé pour révéler votre style » et des photos de sacs et d’accessoires en crochet"
+                                loading="lazy"
+                                decoding="async"
+                            >
+                        </div>
+                        <div class="pf-phone">
+                            <img
+                                class="pf-shot-mobile"
+                                src="assets/images/atelier-mobile.webp"
+                                width="390"
+                                height="844"
+                                alt="Le catalogue du même site sur téléphone : filtres par catégorie, première création, boutons Panier et WhatsApp"
+                                loading="lazy"
+                                decoding="async"
+                            >
+                        </div>
+                    </div>
+
+                    <div class="pf-copy">
+                        <div class="pf-kicker">
+                            <span class="pf-pill">Réalisation</span>
+                            <span class="case-eyebrow">Boutique en ligne · Ouagadougou</span>
+                        </div>
+                        <h3 class="pf-title" id="atelier-title">L’Atelier de Victoria</h3>
+                        <p class="pf-lead">
+                            Des sacs et accessoires en crochet faits main. Ses clientes parcourent le catalogue sur leur téléphone,
+                            remplissent leur panier, puis envoient la commande&nbsp;: le message part sur WhatsApp, déjà rédigé,
+                            avec les articles et les coordonnées.
+                        </p>
+                        <ul class="pf-points">
+                            <li><i class="fas fa-check" aria-hidden="true"></i><span><strong>Un catalogue clair&nbsp;:</strong> catégories, fiche détaillée de chaque pièce, délais indiqués.</span></li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i><span><strong>Une commande simple&nbsp;:</strong> panier, livraison ou retrait, message WhatsApp prêt à envoyer.</span></li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i><span><strong>Du sur mesure&nbsp;:</strong> une rubrique pour demander une pièce personnalisée.</span></li>
+                            <li><i class="fas fa-check" aria-hidden="true"></i><span><strong>Pensé pour le téléphone&nbsp;:</strong> photos légères, mode clair ou sombre, lisible partout.</span></li>
+                        </ul>
+                        <div class="pf-actions">
+                            <a class="btn btn-primary" href="realisations/atelier-victoria/index.html" data-demo="atelier-card">
+                                Visiter la boutique <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                            </a>
+                            <a class="btn btn-whatsapp" href="https://wa.me/22675598412?text=Bonjour%2C%20j%27ai%20vu%20le%20site%20de%20L%27Atelier%20de%20Victoria%20sur%20devbf.com.%20Je%20voudrais%20un%20site%20comme%20celui-ci%20pour%20mon%20activit%C3%A9.%0AMon%20activit%C3%A9%20%3A%20" target="_blank" rel="noopener noreferrer" data-source="atelier-card">
+                                <i class="fab fa-whatsapp" aria-hidden="true"></i> Je veux un site comme celui-ci
+                            </a>
+                        </div>
+                        <p class="pf-note">Vous pouvez tout tester&nbsp;: rien n’est envoyé à l’atelier tant que vous n’appuyez pas sur «&nbsp;Envoyer&nbsp;» dans WhatsApp.</p>
+                        <p class="pf-plan">
+                            <i class="fas fa-tag" aria-hidden="true"></i>
+                            <span>Un site de ce type existe dès <strong>50 000 FCFA</strong> avec la <a href="#tarifs">formule Mini</a> (une page, jusqu’à 10 articles).</span>
+                        </p>
+                    </div>
+                </article>
+
+                <details class="fold fold--bar" id="concepts-fold">
+                    <summary class="fold-toggle">
+                        <span class="fold-label">
+                            <span class="fold-when-closed">Voir 3 idées de sites pour d’autres activités</span>
+                            <span class="fold-when-open">Masquer les idées de sites</span>
+                            <small class="fold-sub">Restaurant (avec une démo à essayer), agence immobilière, boutique</small>
+                        </span>
+                        <i class="fas fa-chevron-down fold-chevron" aria-hidden="true"></i>
+                    </summary>
+                    <div class="fold-body">
+                        <div class="concepts-head">
+                            <h3 id="concepts-title">Et des idées de sites pour d’autres activités</h3>
+                            <p>Ces trois concepts ne sont pas des projets clients&nbsp;: ce sont des exemples de ce que je peux adapter à votre activité. Cliquez sur l’un d’eux pour en savoir plus. Le concept restaurant a une démo à essayer.</p>
+                        </div>
+
+                        <div class="case-grid">
+                            <article class="case-card" data-theme="restaurant" data-case="restaurant">
+                                <div class="case-media">
+                                    <span class="case-badge">Concept</span>
+                                    <div class="case-screen">
+                                        <img
+                                            class="case-photo"
+                                            src="assets/images/concept-restaurant.webp"
+                                            width="1050"
+                                            height="1400"
+                                            alt="Illustration : plat de restaurant, concept de site de commande en ligne"
+                                            loading="lazy"
+                                            decoding="async"
+                                        >
+                                        <i class="fas fa-utensils" aria-hidden="true"></i>
+                                        <span class="case-screen-line">Menu • Commande • WhatsApp</span>
+                                    </div>
+                                </div>
+                                <div class="case-info">
+                                    <span class="case-eyebrow">Restaurant / Maquis</span>
+                                    <h4 class="case-title">Transformer un menu en canal de commande</h4>
+                                    <p class="case-desc">Un site simple pour découvrir les plats, commander rapidement et joindre l’établissement sans friction.</p>
+                                    <div class="case-tags">
+                                        <span class="tag">Menu en ligne</span>
+                                        <span class="tag">Commande</span>
+                                        <span class="tag">Mobile Money</span>
+                                    </div>
+                                    <a class="case-demo" href="demo/restaurant/index.html" data-demo="card">
+                                        Essayer la démo en ligne <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                                    </a>
+                                    <button type="button" class="case-link" data-case="restaurant" aria-label="Voir le concept Restaurant / Maquis">
+                                        Voir le concept <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                            </article>
+
+                            <article class="case-card" data-theme="immobilier" data-case="immobilier">
+                                <div class="case-media">
+                                    <span class="case-badge">Concept</span>
+                                    <div class="case-screen">
+                                        <img
+                                            class="case-photo"
+                                            src="assets/images/concept-immobilier.webp"
+                                            width="1200"
+                                            height="1200"
+                                            alt="Illustration : maison moderne, concept de site immobilier"
+                                            loading="lazy"
+                                            decoding="async"
+                                        >
+                                        <i class="fas fa-building" aria-hidden="true"></i>
+                                        <span class="case-screen-line">Biens • Filtres • Contacts</span>
+                                    </div>
+                                </div>
+                                <div class="case-info">
+                                    <span class="case-eyebrow">Agence immobilière</span>
+                                    <h4 class="case-title">Présenter des biens avec plus de crédibilité</h4>
+                                    <p class="case-desc">Catalogue, fiches détaillées, localisation et formulaires pensés pour recevoir des contacts plus qualifiés.</p>
+                                    <div class="case-tags">
+                                        <span class="tag">Catalogue</span>
+                                        <span class="tag">Fiches biens</span>
+                                        <span class="tag">SEO local</span>
+                                    </div>
+                                    <button type="button" class="case-link" data-case="immobilier" aria-label="Voir le concept Agence immobilière">
+                                        Voir le concept <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                            </article>
+
+                            <article class="case-card" data-theme="boutique" data-case="boutique">
+                                <div class="case-media">
+                                    <span class="case-badge">Concept</span>
+                                    <div class="case-screen">
+                                        <img
+                                            class="case-photo"
+                                            src="assets/images/concept-boutique.webp"
+                                            width="1200"
+                                            height="801"
+                                            alt="Illustration : tapis et textiles colorés suspendus dans une boutique, concept de site e-commerce"
+                                            loading="lazy"
+                                            decoding="async"
+                                        >
+                                        <i class="fas fa-bag-shopping" aria-hidden="true"></i>
+                                        <span class="case-screen-line">Produits • Panier • Livraison</span>
+                                    </div>
+                                </div>
+                                <div class="case-info">
+                                    <span class="case-eyebrow">Boutique / E-commerce</span>
+                                    <h4 class="case-title">Continuer à vendre après la fermeture</h4>
+                                    <p class="case-desc">Catalogue produits, commande WhatsApp ou paiement en ligne selon le besoin et les accès disponibles.</p>
+                                    <div class="case-tags">
+                                        <span class="tag">Catalogue</span>
+                                        <span class="tag">Commande</span>
+                                        <span class="tag">Livraison</span>
+                                    </div>
+                                    <button type="button" class="case-link" data-case="boutique" aria-label="Voir le concept Boutique / E-commerce">
+                                        Voir le concept <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                            </article>
+                        </div>
+
+                        <button type="button" class="fold-close">
+                            Réduire les idées de sites <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </details>
+
+                <!--
+                    TÉMOIGNAGE : demandez à Victoria deux phrases (avec son accord, et son nom) et ajoutez-les juste après
+                    le bloc « project-feature » ci-dessus, avant le bloc « concepts-fold » :
+
+                    <blockquote class="testimonial reveal">
+                        <p>« Phrase de Victoria, avec un résultat concret si possible. »</p>
+                        <p class="testimonial-by">Nikiema Victoria, L’Atelier de Victoria, Ouagadougou</p>
+                    </blockquote>
+
+                    Quand vous aurez d’autres réalisations, ajoutez un bloc « project-feature » par projet.
+                -->
+            </div>
+        </section>
+
+        <!-- À propos : une carte courte, la suite s'ouvre au clic -->
+        <section id="apropos" class="section section--compact" aria-labelledby="about-title">
+            <div class="container">
+                <div class="about-card reveal">
+                    <div class="about-head">
+                        <div class="about-photo" aria-hidden="true">
+                            <!-- Remplacez les initiales par votre portrait (il s'affiche en rond) :
+                                 <img src="assets/images/portrait.webp" alt="" width="320" height="320" loading="lazy"> -->
+                            <span>DB</span>
+                        </div>
+                        <div class="about-intro">
+                            <h2 id="about-title">Qui est derrière DevBF&nbsp;?</h2>
+                            <p class="about-teaser">Un étudiant de Ouagadougou qui crée des sites web simples et clairs.</p>
+                        </div>
+                    </div>
+
+                    <details class="fold fold--bar" id="about-fold">
+                        <summary class="fold-toggle">
+                            <span class="fold-label">
+                                <span class="fold-when-closed">En savoir plus sur moi</span>
+                                <span class="fold-when-open">Masquer</span>
+                            </span>
+                            <i class="fas fa-chevron-down fold-chevron" aria-hidden="true"></i>
+                        </summary>
+                        <div class="fold-body">
+                            <p class="about-lead">Je suis étudiant, et je crée des sites web pour les restaurants, les boutiques et toutes les personnes qui en veulent un.</p>
+                            <p>
+                                DevBF est un projet que je mène à titre personnel, en parallèle de mes études. Je travaille seul&nbsp;:
+                                c’est donc toujours moi qui vous réponds et qui construis votre site. Avant de commencer, vous recevez
+                                un devis écrit, et je vous dis franchement ce qui est réaliste pour votre budget.
+                            </p>
+
+                            <ul class="about-facts">
+                                <li>
+                                    <i class="fas fa-laptop-code" aria-hidden="true"></i>
+                                    <span>Un exemple concret à essayer&nbsp;: la boutique de L’Atelier de Victoria, plus haut sur cette page.</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-clock" aria-hidden="true"></i>
+                                    <span>Réponse sous 24 h, sur WhatsApp, par appel ou par email.</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-shield-halved" aria-hidden="true"></i>
+                                    <span>Pas encore d’entreprise enregistrée&nbsp;: un devis écrit et des <a href="conditions-services.html">conditions de services</a> claires encadrent chaque projet.</span>
+                                </li>
+                            </ul>
+
+                            <a
+                                href="https://wa.me/22675598412?text=Bonjour%2C%20je%20souhaite%20vous%20poser%20une%20question%20sur%20vos%20services."
+                                class="btn btn-whatsapp"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                data-source="about"
+                            >
+                                <i class="fab fa-whatsapp" aria-hidden="true"></i> Me poser une question
+                            </a>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- Method -->
+        <section id="methode" class="section" aria-labelledby="methode-title">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 id="methode-title">Comment je travaille</h2>
+                    <p>Un processus simple pour éviter les surprises et avancer clairement.</p>
+                </div>
+
+                <div class="process-grid reveal">
+                    <article class="process-step">
+                        <div class="step-number">01</div>
+                        <h3>Appel découverte</h3>
+                        <p>On identifie votre objectif, vos clients et le type de site ou d’application dont vous avez vraiment besoin.</p>
+                    </article>
+
+                    <article class="process-step">
+                        <div class="step-number">02</div>
+                        <h3>Proposition claire</h3>
+                        <p>Vous recevez un plan simple&nbsp;: fonctionnalités, délai, prix et prochaines étapes. Pas de jargon inutile.</p>
+                    </article>
+
+                    <article class="process-step">
+                        <div class="step-number">03</div>
+                        <h3>Design & développement</h3>
+                        <p>Je construis une expérience rapide, moderne et optimisée pour faciliter le contact avec vos clients.</p>
+                    </article>
+
+                    <article class="process-step">
+                        <div class="step-number">04</div>
+                        <h3>Mise en ligne & suivi</h3>
+                        <p>Lancement, formation, intégration Mobile Money si nécessaire, puis support pour faire évoluer votre projet.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing -->
+        <section id="tarifs" class="section" aria-labelledby="tarifs-title">
+            <div class="container">
+                <div class="section-header section-header--tight reveal">
+                    <h2 id="tarifs-title">Tarifs Transparents</h2>
+                    <p>De 50 000 FCFA pour un très petit commerce jusqu’au sur-mesure. Ouvrez le détail pour comparer les formules&nbsp;: en choisir une pré-remplit le formulaire.</p>
+                </div>
+
+                <ul class="price-glance reveal" aria-label="Aperçu des formules et de leurs prix">
+                    <li class="glance-tile">
+                        <span class="gl-name">Mini</span>
+                        <span class="gl-price">50&nbsp;000 <small>FCFA</small></span>
+                        <span class="gl-desc">1 page, jusqu’à 10 articles</span>
+                    </li>
+                    <li class="glance-tile">
+                        <span class="gl-name">Starter</span>
+                        <span class="gl-price">150&nbsp;000 <small>FCFA</small></span>
+                        <span class="gl-desc">Site vitrine de 3 pages</span>
+                    </li>
+                    <li class="glance-tile is-featured">
+                        <span class="gl-badge">Populaire</span>
+                        <span class="gl-name">Business</span>
+                        <span class="gl-price">350&nbsp;000 <small>FCFA</small></span>
+                        <span class="gl-desc">Site complet, Mobile Money</span>
+                    </li>
+                    <li class="glance-tile">
+                        <span class="gl-name">Enterprise</span>
+                        <span class="gl-price">Sur devis</span>
+                        <span class="gl-desc">Application sur mesure</span>
+                    </li>
+                </ul>
+
+                <details class="fold fold--bar" id="tarifs-fold">
+                    <summary class="fold-toggle">
+                        <span class="fold-label">
+                            <span class="fold-when-closed">Voir le détail des formules</span>
+                            <span class="fold-when-open">Masquer le détail</span>
+                        </span>
+                        <i class="fas fa-chevron-down fold-chevron" aria-hidden="true"></i>
+                    </summary>
+                    <div class="fold-body">
+                        <div class="pricing-grid">
+                            <article class="pricing-card">
+                                <div class="pricing-header">
+                                    <h3>Mini</h3>
+                                    <div class="pricing-price">50k <span>FCFA</span></div>
+                                </div>
+
+                                <p class="plan-audience">
+                                    Pour les très petits commerces et les créateurs qui vendent déjà par WhatsApp.
+                                </p>
+
+                                <div class="pricing-meta">
+                                    <div><span>Livraison</span><strong>3 à 5 jours</strong></div>
+                                    <div><span>Révisions</span><strong>1 tour</strong></div>
+                                    <div><span>Hébergement</span><strong>Inclus 1 an</strong></div>
+                                </div>
+
+                                <ul class="pricing-features">
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> Une page&nbsp;: présentation, produits, contact</li>
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> Jusqu’à 10 articles avec photos</li>
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> Panier et commande WhatsApp</li>
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> Votre logo et vos couleurs</li>
+                                </ul>
+
+                                <button type="button" class="btn btn-secondary btn-block" data-plan="mini">
+                                    Choisir Mini
+                                </button>
+                                <p class="plan-wa">
+                                    <a href="https://wa.me/22675598412?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20la%20formule%20Mini." target="_blank" rel="noopener noreferrer" data-source="plan-mini">
+                                        <i class="fab fa-whatsapp" aria-hidden="true"></i>ou écrivez-moi sur WhatsApp
+                                    </a>
+                                </p>
+                            </article>
+
+                            <article class="pricing-card">
+                                <div class="pricing-header">
+                                    <h3>Starter</h3>
+                                    <div class="pricing-price">150k <span>FCFA</span></div>
+                                </div>
+
+                                <p class="plan-audience">
+                                    Pour les entreprises qui ont besoin d’une présence professionnelle rapide.
+                                </p>
+
+                                <div class="pricing-meta">
+                                    <div><span>Livraison</span><strong>5 à 7 jours</strong></div>
+                                    <div><span>Révisions</span><strong>2 tours</strong></div>
+                                    <div><span>Hébergement</span><strong>Inclus 1 an</strong></div>
+                                </div>
+
+                                <ul class="pricing-features">
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> Site Vitrine (3 pages)</li>
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> Design Responsive</li>
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> Formulaire & WhatsApp</li>
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> Optimisation mobile</li>
+                                </ul>
+
+                                <button type="button" class="btn btn-secondary btn-block" data-plan="starter">
+                                    Choisir Starter
+                                </button>
+                                <p class="plan-wa">
+                                    <a href="https://wa.me/22675598412?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20la%20formule%20Starter." target="_blank" rel="noopener noreferrer" data-source="plan-starter">
+                                        <i class="fab fa-whatsapp" aria-hidden="true"></i>ou écrivez-moi sur WhatsApp
+                                    </a>
+                                </p>
+                            </article>
+
+                            <article class="pricing-card featured">
+                                <div class="pricing-badge">Populaire</div>
+
+                                <div class="pricing-header">
+                                    <h3>Business</h3>
+                                    <div class="pricing-price">350k <span>FCFA</span></div>
+                                </div>
+
+                                <p class="plan-audience">
+                                    Pour les structures qui veulent vendre, réserver ou encaisser en ligne.
+                                </p>
+
+                                <div class="pricing-meta">
+                                    <div><span>Livraison</span><strong>10 à 18 jours</strong></div>
+                                    <div><span>Révisions</span><strong>3 tours</strong></div>
+                                    <div><span>Support</span><strong>6 mois</strong></div>
+                                </div>
+
+                                <ul class="pricing-features">
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> Site Complet (10 pages)</li>
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> Animations Premium</li>
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> Intégration Mobile Money</li>
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> Espace Admin (CMS)</li>
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> SEO local de base</li>
+                                </ul>
+
+                                <button type="button" class="btn btn-primary btn-block" data-plan="business">
+                                    Choisir Business
+                                </button>
+                                <p class="plan-wa">
+                                    <a href="https://wa.me/22675598412?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20la%20formule%20Business." target="_blank" rel="noopener noreferrer" data-source="plan-business">
+                                        <i class="fab fa-whatsapp" aria-hidden="true"></i>ou écrivez-moi sur WhatsApp
+                                    </a>
+                                </p>
+                            </article>
+
+                            <article class="pricing-card">
+                                <div class="pricing-header">
+                                    <h3>Enterprise</h3>
+                                    <div class="pricing-price">Sur Devis</div>
+                                </div>
+
+                                <p class="plan-audience">
+                                    Pour les projets complexes, les applications métiers et les e-commerce avancés.
+                                </p>
+
+                                <div class="pricing-meta">
+                                    <div><span>Livraison</span><strong>Sur planning</strong></div>
+                                    <div><span>Accompagnement</span><strong>Dédié</strong></div>
+                                    <div><span>Maintenance</span><strong>Optionnelle</strong></div>
+                                </div>
+
+                                <ul class="pricing-features">
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> Application Web Complexe</li>
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> E-commerce avancé</li>
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> API & Intégrations</li>
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> Base de données sécurisée</li>
+                                    <li><i class="fas fa-check" aria-hidden="true"></i> Maintenance dédiée</li>
+                                </ul>
+
+                                <button type="button" class="btn btn-secondary btn-block" data-plan="enterprise">
+                                    Demander un devis
+                                </button>
+                                <p class="plan-wa">
+                                    <a href="https://wa.me/22675598412?text=Bonjour%2C%20je%20souhaite%20un%20devis%20pour%20un%20projet%20sur%20mesure." target="_blank" rel="noopener noreferrer" data-source="plan-enterprise">
+                                        <i class="fab fa-whatsapp" aria-hidden="true"></i>ou écrivez-moi sur WhatsApp
+                                    </a>
+                                </p>
+                            </article>
+                        </div>
+
+                        <p class="pricing-note">
+                            <i class="fas fa-circle-info" aria-hidden="true"></i>
+                            <span>
+                                <strong>Mini, un cadre volontairement simple&nbsp;:</strong> une page, jusqu’à 10 articles, commande par WhatsApp.
+                                Pas de paiement en ligne ni d’espace d’administration&nbsp;: pour cela, voyez Business. Si vous hésitez, écrivez-moi&nbsp;:
+                                je vous dis honnêtement quelle formule vous convient.
+                            </span>
+                        </p>
+
+                        <p class="pricing-note">
+                            <i class="fas fa-wallet" aria-hidden="true"></i>
+                            <span>
+                                <strong>Après la mise en ligne&nbsp;:</strong> maintenance mensuelle en option (mises à jour, sauvegardes,
+                                petites modifications). Le tarif dépend de votre site et figure dans le devis.
+                            </span>
+                        </p>
+
+                        <button type="button" class="fold-close">
+                            Réduire les tarifs <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </details>
+            </div>
+        </section>
+
+        <!-- Audit gratuit -->
+        <section id="audit" class="section section--compact" aria-labelledby="audit-title">
+            <div class="container">
+                <div class="audit-card reveal">
+                    <div class="audit-copy">
+                        <h2 id="audit-title">Audit gratuit de votre présence en ligne</h2>
+                        <p>
+                            Envoyez-moi le nom de votre restaurant ou de votre boutique. Sous 24 h, je vous dis ce qui manque
+                            sur Google, WhatsApp et les réseaux pour recevoir plus de clients. Gratuit, sans engagement.
+                        </p>
+                    </div>
+
+                    <div class="audit-actions">
+                        <button type="button" class="btn btn-primary" id="auditBtn">Demander mon audit</button>
+                        <a
+                            href="https://wa.me/22675598412?text=Bonjour%2C%20je%20voudrais%20un%20audit%20gratuit%20de%20ma%20pr%C3%A9sence%20en%20ligne."
+                            class="btn btn-whatsapp"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            data-source="audit"
+                        >
+                            <i class="fab fa-whatsapp" aria-hidden="true"></i> Sur WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Payback calculator -->
+        <section id="simulation" class="section section--compact" aria-labelledby="roi-title">
+            <div class="container">
+                <div class="section-header section-header--tight reveal">
+                    <h2 id="roi-title">Combien de commandes pour rentabiliser votre site&nbsp;?</h2>
+                    <p>Un calcul simple, à titre indicatif. Ce n’est pas une promesse de résultat.</p>
+                </div>
+
+                <details class="fold fold--bar" id="simulation-fold">
+                    <summary class="fold-toggle">
+                        <span class="fold-label">
+                            <span class="fold-when-closed">Faire le calcul pour mon activité</span>
+                            <span class="fold-when-open">Masquer le calculateur</span>
+                        </span>
+                        <i class="fas fa-chevron-down fold-chevron" aria-hidden="true"></i>
+                    </summary>
+                    <div class="fold-body">
+                        <div class="calculator-container">
+                            <div class="calc-grid">
+                                <div class="calc-inputs">
+                                    <div class="form-group static-label calc-plan">
+                                        <label id="calc-plan-label">Formule</label>
+                                        <div class="choice-group" role="radiogroup" aria-labelledby="calc-plan-label">
+                                            <label class="choice">
+                                                <input type="radio" name="calc_plan" value="50000">
+                                                <span>Mini <small>50 000 FCFA</small></span>
+                                            </label>
+                                            <label class="choice">
+                                                <input type="radio" name="calc_plan" value="150000" checked>
+                                                <span>Starter <small>150 000 FCFA</small></span>
+                                            </label>
+                                            <label class="choice">
+                                                <input type="radio" name="calc_plan" value="350000">
+                                                <span>Business <small>350 000 FCFA</small></span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="calc-input-group">
+                                        <label for="calc-panier">
+                                            Panier moyen (FCFA)
+                                            <span id="val-panier" aria-live="polite">5 000</span>
+                                        </label>
+                                        <input type="range" id="calc-panier" min="1000" max="100000" step="500" value="5000">
+                                    </div>
+
+                                    <div class="calc-input-group">
+                                        <label for="calc-marge">
+                                            Ce qu’il vous reste sur chaque commande
+                                            <span id="val-marge" aria-live="polite">40%</span>
+                                        </label>
+                                        <input type="range" id="calc-marge" min="10" max="80" step="5" value="40">
+                                    </div>
+                                </div>
+
+                                <div class="calc-result">
+                                    <p>Commandes à gagner pour couvrir le site</p>
+                                    <h3 id="calc-total" aria-live="polite">75 commandes</h3>
+                                    <small class="calc-note" id="calc-sub">soit environ 7 par mois pour être remboursé en 12 mois</small>
+                                    <small class="calc-note calc-disclaimer">
+                                        Hors hébergement et frais Mobile Money. Chaque commerce est différent&nbsp;: ce calcul donne un ordre de grandeur.
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </section>
+
+        <!-- Engagements -->
+        <section id="engagements" class="section" aria-labelledby="engagements-title">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 id="engagements-title">Mes engagements</h2>
+                    <p>Ce que vous obtenez en travaillant avec moi.</p>
+                </div>
+
+                <div class="engagement-grid reveal">
+                    <article class="engagement-card">
+                        <div class="engagement-icon" aria-hidden="true">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <h3>Validation client</h3>
+                        <p>
+                            Vous validez le design et les contenus avant la mise en ligne. Rien n’est publié sans votre accord.
+                        </p>
+                    </article>
+
+                    <article class="engagement-card">
+                        <div class="engagement-icon" aria-hidden="true">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3>Performance</h3>
+                        <p>
+                            Le site est conçu pour être rapide, lisible sur mobile et facile à comprendre pour vos visiteurs.
+                        </p>
+                    </article>
+
+                    <article class="engagement-card">
+                        <div class="engagement-icon" aria-hidden="true">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3>Support</h3>
+                        <p>
+                            Après la livraison, je reste disponible pour les corrections, les évolutions et l’accompagnement de votre projet.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="section" aria-labelledby="faq-title">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 id="faq-title">Questions fréquentes</h2>
+                    <p>Les réponses aux questions que se posent la plupart des entrepreneurs avant de lancer leur projet web.</p>
+                </div>
+
+                <div class="faq-list reveal">
+                    <details class="faq-item">
+                        <summary>
+                            Puis-je payer avec Orange Money ou Moov Money&nbsp;?
+                            <i class="fas fa-plus faq-icon" aria-hidden="true"></i>
+                        </summary>
+                        <div class="faq-answer">
+                            Oui. Je peux intégrer les paiements Mobile Money selon vos besoins&nbsp;: commande en ligne, réservation, abonnement, paiement partiel ou validation de commande. L’objectif est de simplifier l’expérience client au Burkina Faso.
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>
+                            Mon activité est toute petite&nbsp;: un site est-il possible avec un petit budget&nbsp;?
+                            <i class="fas fa-plus faq-icon" aria-hidden="true"></i>
+                        </summary>
+                        <div class="faq-answer">
+                            Oui, c’est pour cela que la formule Mini existe&nbsp;: à partir de 50 000 FCFA, une page avec votre catalogue (jusqu’à 10 articles), un panier et la commande par WhatsApp, sur le modèle de la boutique L’Atelier de Victoria. Le cadre est volontairement simple, ce qui permet de garder le prix bas. Si votre activité grandit, vous pourrez passer à Starter ou à Business.
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>
+                            Combien de temps faut-il pour créer un site&nbsp;?
+                            <i class="fas fa-plus faq-icon" aria-hidden="true"></i>
+                        </summary>
+                        <div class="faq-answer">
+                            Un site vitrine peut être livré en quelques jours. Un site e-commerce ou une application sur mesure demande généralement plus de temps, selon les fonctionnalités, les contenus et les validations. Vous recevez toujours un planning clair avant de commencer.
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>
+                            L’hébergement et le nom de domaine sont-ils inclus&nbsp;?
+                            <i class="fas fa-plus faq-icon" aria-hidden="true"></i>
+                        </summary>
+                        <div class="faq-answer">
+                            Selon la formule choisie, l’hébergement peut être inclus pendant une période définie. Le nom de domaine peut être pris en charge ou accompagné selon vos préférences. L’important est que vous compreniez exactement ce qui est inclus, sans frais cachés.
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>
+                            Mon site sera-t-il rapide avec une connexion mobile&nbsp;?
+                            <i class="fas fa-plus faq-icon" aria-hidden="true"></i>
+                        </summary>
+                        <div class="faq-answer">
+                            Oui. Les sites sont optimisés pour le mobile, les images sont compressées, le code est allégé et les animations sont utilisées avec intelligence. L’objectif est d’offrir une bonne expérience même sur connexion 3G/4G.
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>
+                            Pourrai-je modifier mon site moi-même après la livraison&nbsp;?
+                            <i class="fas fa-plus faq-icon" aria-hidden="true"></i>
+                        </summary>
+                        <div class="faq-answer">
+                            Oui, si la formule inclut un espace administrateur ou un CMS. Vous pourrez mettre à jour vos textes, images, produits, articles ou informations sans dépendre complètement d’un développeur pour chaque modification.
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>
+                            Que se passe-t-il après la mise en ligne&nbsp;?
+                            <i class="fas fa-plus faq-icon" aria-hidden="true"></i>
+                        </summary>
+                        <div class="faq-answer">
+                            Je reste disponible pour le support, les corrections, les évolutions et l’optimisation. Un site n’est pas un produit fini&nbsp;: c’est un outil commercial qui doit évoluer avec votre activité.
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="section" aria-labelledby="contact-title">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 id="contact-title">Démarrons votre projet</h2>
+                    <p>Le premier échange est gratuit. Réponse sous 24h.</p>
+                </div>
+
+                <div class="contact-grid reveal">
+                    <div class="contact-info">
+                        <h3>Parlons business.</h3>
+                        <p>
+                            Je suis basé à Ouagadougou, mais je travaille avec des entrepreneurs dans tout le pays.
+                            Envoyez-moi un message, et construisons quelque chose de clair et professionnel.
+                        </p>
+
+                        <div class="contact-list">
+                            <div class="contact-item">
+                                <div class="contact-icon" aria-hidden="true">
+                                    <i class="fab fa-whatsapp"></i>
+                                </div>
+                                <div>
+                                    <h4>WhatsApp</h4>
+                                    <p>
+                                        <a href="https://wa.me/22675598412" target="_blank" rel="noopener noreferrer" data-source="contact">
+                                            +226 75 59 84 12
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon" aria-hidden="true">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4>Email</h4>
+                                    <p>
+                                        <a href="mailto:lompounteni07@gmail.com">lompounteni07@gmail.com</a>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon" aria-hidden="true">
+                                    <i class="fas fa-location-dot"></i>
+                                </div>
+                                <div>
+                                    <h4>Zone d’intervention</h4>
+                                    <p>Ouagadougou, Bobo-Dioulasso et tout le Burkina Faso.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-wrap">
+                    <form class="contact-form" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                        <div class="form-row">
+                            <div class="form-group is-required">
+                                <input type="text" id="name" name="name" placeholder=" " required autocomplete="name">
+                                <label for="name">Votre Nom</label>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" placeholder=" " autocomplete="email">
+                                <label for="email">Votre Email</label>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group is-required">
+                                <input type="tel" id="phone" name="phone" placeholder=" " autocomplete="tel" inputmode="tel" required>
+                                <label for="phone">Téléphone / WhatsApp</label>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="text" id="company" name="company" placeholder=" " autocomplete="organization">
+                                <label for="company">Entreprise / Boutique</label>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group select-group is-required">
+                                <label for="project_type">Type de projet</label>
+                                <select id="project_type" name="project_type" required>
+                                    <option value="" disabled selected>Choisissez une option</option>
+                                    <option value="Audit gratuit">Audit gratuit de ma présence en ligne</option>
+                                    <option value="Site vitrine">Site vitrine</option>
+                                    <option value="E-commerce / Mobile Money">E-commerce / Mobile Money</option>
+                                    <option value="Application sur mesure">Application sur mesure</option>
+                                    <option value="Refonte de site">Refonte de site</option>
+                                    <option value="SEO / accompagnement">SEO / accompagnement</option>
+                                    <option value="Autre">Autre</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group select-group">
+                                <label for="budget">Budget estimé</label>
+                                <select id="budget" name="budget">
+                                    <option value="" disabled selected>Choisissez une fourchette</option>
+                                    <option value="Moins de 75 000 FCFA">Moins de 75 000 FCFA</option>
+                                    <option value="75 000 - 150 000 FCFA">75 000 - 150 000 FCFA</option>
+                                    <option value="150 000 - 350 000 FCFA">150 000 - 350 000 FCFA</option>
+                                    <option value="350 000 - 800 000 FCFA">350 000 - 800 000 FCFA</option>
+                                    <option value="Plus de 800 000 FCFA">Plus de 800 000 FCFA</option>
+                                    <option value="Je ne sais pas encore">Je ne sais pas encore</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" id="city" name="city" placeholder=" " autocomplete="address-level2">
+                            <label for="city">Ville</label>
+                        </div>
+
+                        <div class="form-group static-label">
+                            <label>Préférence de contact</label>
+                            <div class="choice-group">
+                                <label class="choice">
+                                    <input type="radio" name="contact_preference" value="WhatsApp" checked>
+                                    <span><i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp</span>
+                                </label>
+                                <label class="choice">
+                                    <input type="radio" name="contact_preference" value="Email">
+                                    <span><i class="fas fa-envelope" aria-hidden="true"></i> Email</span>
+                                </label>
+                                <label class="choice">
+                                    <input type="radio" name="contact_preference" value="Appel">
+                                    <span><i class="fas fa-phone" aria-hidden="true"></i> Appel</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group is-required">
+                            <textarea id="message" name="message" placeholder=" " required></textarea>
+                            <label for="message">Parlez-moi de votre projet</label>
+                        </div>
+
+                        <p class="form-consent">
+                            * Champs obligatoires. En envoyant ce formulaire, vous acceptez que vos informations
+                            servent à répondre à votre demande. Voir la
+                            <a href="politique-confidentialite.html">politique de confidentialité</a>.
+                        </p>
+
+                        <!-- Honeypot anti-spam -->
+                        <div class="sr-only" aria-hidden="true">
+                            <label for="company_website">Company Website</label>
+                            <input type="text" id="company_website" name="company_website" tabindex="-1" autocomplete="off">
+                        </div>
+
+                        <input type="hidden" name="_subject" value="Nouveau message depuis DevBF">
+
+                        <button type="submit" class="btn btn-primary btn-block" id="submitBtn">
+                            Envoyer le message <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                        </button>
+
+                        <!-- Affichée par js/main.js tant que le formulaire n'a pas d'identifiant Formspree (mode WhatsApp). -->
+                        <p class="form-mode-note" id="formModeNote" hidden>
+                            Le bouton ouvre WhatsApp avec votre message déjà rédigé&nbsp;: vous n’avez plus qu’à appuyer sur «&nbsp;Envoyer&nbsp;».
+                        </p>
+
+                        <div class="form-fallback" id="formFallback" role="alert" hidden>
+                            <p>L’envoi n’a pas abouti. Votre message n’est pas perdu&nbsp;: envoyez-le directement sur WhatsApp.</p>
+                            <a
+                                id="formFallbackWa"
+                                href="https://wa.me/22675598412"
+                                class="btn btn-whatsapp btn-block"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                data-source="form-fallback"
+                            >
+                                <i class="fab fa-whatsapp" aria-hidden="true"></i> Envoyer sur WhatsApp
+                            </a>
+                        </div>
+                    </form>
+
+                    <div class="contact-form form-success" id="formSuccess" role="status" tabindex="-1" hidden>
+                        <i class="fas fa-check-circle form-success-icon" aria-hidden="true"></i>
+                        <h3>Message bien reçu</h3>
+                        <p>
+                            Je vous réponds sous 24 h. Pour aller plus vite, écrivez-moi directement sur WhatsApp&nbsp;:
+                            c’est le canal le plus rapide.
+                        </p>
+                        <a
+                            href="https://wa.me/22675598412?text=Bonjour%2C%20je%20viens%20d%E2%80%99envoyer%20un%20message%20depuis%20devbf.com."
+                            class="btn btn-whatsapp btn-block"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            data-source="form-success"
+                        >
+                            <i class="fab fa-whatsapp" aria-hidden="true"></i> Continuer sur WhatsApp
+                        </a>
+                        <button type="button" class="btn btn-secondary btn-block" id="formReset">Envoyer un autre message</button>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <a href="#accueil" class="logo">Dev<span>BF</span></a>
+
+            <h2 class="footer-title">Prêt à rendre votre entreprise plus visible&nbsp;?</h2>
+            <p class="footer-tagline">Conçu avec passion au Burkina Faso.</p>
+            <p class="footer-areas">Ouagadougou • Bobo-Dioulasso • Koudougou • Kaya • Tout le Burkina</p>
+
+            <!-- Réseaux sociaux : masqués tant qu'aucun lien n'est renseigné.
+                 Avec tools/configure.py (--facebook, --instagram, --linkedin, --github, --twitter) les liens s'affichent seuls ;
+                 à la main : retirez l'attribut hidden du bloc et du lien, puis remplacez href="#". -->
+            <div class="social-links" hidden>
+                <a href="#" hidden data-social="facebook" aria-label="Facebook DevBF" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                </a>
+                <a href="#" hidden data-social="instagram" aria-label="Instagram DevBF" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                </a>
+                <a href="#" hidden data-social="linkedin" aria-label="LinkedIn DevBF" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                </a>
+                <a href="#" hidden data-social="github" aria-label="GitHub DevBF" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                </a>
+                <a href="#" hidden data-social="twitter" aria-label="Twitter / X DevBF" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                </a>
+            </div>
+
+            <ul class="footer-legal" aria-label="Réalisation, démo et guides">
+                <li><a href="realisations/atelier-victoria/index.html">Réalisation&nbsp;: L’Atelier de Victoria</a></li>
+                <li><a href="demo/restaurant/index.html">Démo restaurant</a></li>
+                <li><a href="ressources/accepter-mobile-money-site-web-burkina-faso.html">Guide&nbsp;: accepter Mobile Money</a></li>
+                <li><a href="ressources/site-web-restaurant-ouagadougou.html">Guide&nbsp;: site web de restaurant</a></li>
+                <li><a href="ressources/creation-site-web-ouagadougou.html">Guide&nbsp;: créer son site à Ouagadougou</a></li>
+            </ul>
+
+            <ul class="footer-legal" aria-label="Informations légales">
+                <li><a href="mentions-legales.html">Mentions légales</a></li>
+                <li><a href="politique-confidentialite.html">Politique de confidentialité</a></li>
+                <li><a href="conditions-services.html">Conditions de services</a></li>
+            </ul>
+
+            <p class="footer-copy">
+                &copy; <span id="current-year"></span> DevBF. Tous droits réservés.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Case Modal -->
+    <div id="caseModal" class="case-modal" hidden role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="case-modal-backdrop" data-close></div>
+
+        <div class="case-modal-dialog">
+            <button type="button" class="case-modal-close" data-close aria-label="Fermer le concept">
+                <i class="fas fa-xmark" aria-hidden="true"></i>
+            </button>
+
+            <div class="case-modal-preview">
+                <span class="case-modal-badge">Concept DevBF</span>
+                <img
+                    id="modalPhoto"
+                    class="case-photo"
+                    alt=""
+                    decoding="async"
+                >
+                <i id="modalIcon" class="fas fa-utensils" aria-hidden="true"></i>
+            </div>
+
+            <div class="case-modal-content">
+                <span class="case-eyebrow" id="modalEyebrow">Restaurant / Maquis</span>
+                <h2 id="modalTitle">Titre</h2>
+                <p id="modalDesc"></p>
+                <div class="case-modal-features" id="modalTags"></div>
+                <a href="demo/restaurant/index.html" class="case-demo case-demo--modal" id="modalDemo" data-demo="modal" hidden>
+                    <span id="modalDemoLabel">Essayer la démo en ligne</span> <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                </a>
+                <button type="button" class="btn btn-primary" id="modalCta">
+                    Démarrer un projet similaire <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Sticky CTA -->
+    <div class="mobile-cta-bar" aria-label="Actions rapides">
+        <a href="#contact" class="btn btn-primary btn-block">
+            Démarrer un projet
+        </a>
+        <a
+            href="https://wa.me/22675598412?text=Bonjour%2C%20je%20souhaite%20discuter%20de%20mon%20projet%20web."
+            class="btn btn-whatsapp btn-block"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-source="mobile-bar"
+        >
+            <i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp
+        </a>
+    </div>
+
+    <!-- Floating WhatsApp -->
+    <a
+        href="https://wa.me/22675598412?text=Bonjour%2C%20je%20souhaite%20discuter%20de%20mon%20projet%20web."
+        class="whatsapp-float"
+        target="_blank"
+        rel="noopener noreferrer"
+        data-source="float"
+        aria-label="Contacter DevBF sur WhatsApp"
+    >
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+    </a>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast success" role="status" aria-live="polite">
+        <i id="toastIcon" class="fas fa-check-circle" aria-hidden="true"></i>
+        <span id="toastMessage"></span>
+    </div>
+
+    <!--
+        Statistiques respectueuses de la vie privée (optionnel, désactivées par défaut).
+        Pour les activer : décommentez UNE ligne, puis suivez la section Analytics du README
+        (politique de confidentialité et en-tête CSP à mettre à jour).
+        <script defer data-domain="devbf.com" src="https://plausible.io/js/script.js"></script>
+        <script defer data-website-id="VOTRE-ID" src="https://cloud.umami.is/script.js"></script>
+    -->
+    <script src="js/main.js" defer></script>
+</body>
+</html>
