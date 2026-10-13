@@ -1,6 +1,6 @@
 # DevBF website
 
-Static French website for DevBF, a web-development activity run by a student in Ouagadougou (Burkina Faso): home page,
+Static French website for DevBF, a web-development activity run by a student from Burkina Faso currently studying in the US: home page,
 three guides, a real shop built as a showcase (L'Atelier de Victoria), a restaurant demo with WhatsApp ordering, and three
 legal pages. Plain HTML, CSS and JavaScript: no build step, no framework, no cookies. The only third-party requests are
 Google Fonts (for the headings, until that font is hosted, see [Fonts](#fonts), and on the Atelier showcase page) and,
@@ -8,8 +8,8 @@ only if it is turned on, the Formspree form service.
 
 ## Status
 
-The site is complete and can be published as it is. The WhatsApp number (+226 75 59 84 12) and the email address
-(lompounteni07@gmail.com) are set everywhere, the legal pages are written for an activity that has no registered business yet,
+The site is complete and can be published as it is. The WhatsApp number (+226XXXXXX) and the email address
+(XXXXXXXXX@XXXXXX.XXX) are set everywhere, the legal pages are written for an activity that has no registered business yet,
 and the contact form needs no account: it opens WhatsApp with the visitor's message ready (see [Contact form](#contact-form)).
 
 ### Before going live
